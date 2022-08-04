@@ -32,7 +32,6 @@ router.get('/:idProduct', async(req,res) => {
 router.post('/', uploader.single('filePost'), async(req, res)=>{
     let newProduct = req.body;
     newProduct.image = req.file.filename;
-    console.log(newProduct)
     if (!req.file) return res.status(500).send({error:'No se pudo cargar el archivo.'})
     if (!newProduct.title || !newProduct.price) return res.status(400).send({error: "Por favor, completar todos los campos."});
     let productAdded = await productService.addProduct(newProduct);

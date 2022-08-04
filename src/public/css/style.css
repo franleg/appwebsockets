@@ -3,7 +3,6 @@ html, body {
 }
 
 .form-container {
-    margin: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,4 +123,16 @@ textarea{
     margin-top: 10px;
     margin-bottom: 50px;
     width: 550px;
+}
+
+@media only screen and (max-width: 768px) {
+    form {
+        width: 350px;
+    }
+    .table-container {
+        width: 350px;
+    }
+    .btn-send {
+        width: 350px;
+    }
 }
